@@ -1,0 +1,149 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+text, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p, 
+span, 
+br, 
+input,
+label,
+select,
+strong {
+    font-family: "Poppins";
+    color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+  }
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    background-color: #262424;
+    text-align: center;
+    position: relative;
+    padding: 16px;
+    width: 100%;
+}
+
+input, select {
+    background-color: #000;
+    border: none;
+    border-bottom: 2px solid #262424;
+    padding: 4px;
+}
+
+select {
+    margin-top: 1px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.container {
+    max-width: 1112px;
+    width: 100%;
+}
+
+.page-title {
+    font-weight: 500;
+}
+
+.select-label {
+    border-bottom: 2px solid #262424;
+    padding: 0;
+}
+
+.new-item {
+    padding: 12px;
+    vertical-align: bottom;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-item-title {
+    font-weight: 400;
+    font-size: 24px;
+    padding: 12px 0px;
+}
+
+.add-btn-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-btn {
+    border: 2px solid #146DBD;
+    border-radius: 8px;
+    color: #146DBD;
+    background-color: rgba(0, 0, 0, 1);
+    font-family: "Poppins";
+    font-size: 20px;
+    padding: 8px 16px;
+}
+
+.year-div {
+    background-color: #262424;
+    padding: 12px;
+    margin: 0px 16px 16px 16px;
+    border-radius: 12px;
+}
+
+.year-title {
+    border-bottom: 1px solid gray;
+}
+
+.month-div {
+    padding-left: 28px;
+    padding-top: 8px;
+    margin-bottom: 16px;
+}
+
+.month-title, .section-title {
+    font-weight: 500;
+}
+
+.section-div {
+    padding: 20px;
+}
+
+.item-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0px 0px 0px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid gray;
+}

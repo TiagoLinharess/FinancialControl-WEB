@@ -53,10 +53,13 @@ header {
 }
 
 input, select {
-    background-color: #000;
+    background-color: transparent;
     border: none;
-    border-bottom: 2px solid #262424;
     padding: 4px;
+}
+
+input {
+    border-bottom: 2px solid #262424;
 }
 
 select {
@@ -80,8 +83,11 @@ textarea:focus, input:focus{
     font-weight: 500;
 }
 
-.select-label {
+.select-div {
     border-bottom: 2px solid #262424;
+}
+
+.select-label {
     padding: 0;
 }
 
@@ -115,6 +121,37 @@ textarea:focus, input:focus{
     padding: 8px 16px;
 }
 
+.edit-finish-btn {
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #0f431e;
+    font-family: "Poppins";
+    padding: 8px 16px;
+    margin-bottom: 4px;
+}
+
+.edit-btn {
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #0f431e;
+    font-family: "Poppins";
+    padding: 8px 16px;
+    margin-bottom: 4px;
+    margin-right: 16px;
+}
+
+.delete-btn {
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #690707;
+    font-family: "Poppins";
+    padding: 8px 16px;
+    margin-bottom: 4px;
+}
+
 .year-div {
     background-color: #262424;
     padding: 12px;
@@ -143,7 +180,19 @@ textarea:focus, input:focus{
 .item-div {
     display: flex;
     justify-content: space-between;
-    padding: 4px 0px 0px 0px;
-    margin-bottom: 16px;
+    padding: 12px 8px 4px 0px;
     border-bottom: 1px solid gray;
+}
+
+.edit-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-edit {
+    border-radius: 8px;;
+    border: 2px solid gray;
+    padding: 8px;
+    margin-bottom: 8px;
 }

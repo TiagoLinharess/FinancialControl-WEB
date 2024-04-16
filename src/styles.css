@@ -56,6 +56,7 @@ input, select {
     background-color: transparent;
     border: none;
     padding: 4px;
+    font-size: 20px;
 }
 
 input {
@@ -89,13 +90,15 @@ textarea:focus, input:focus{
 
 .select-label {
     padding: 0;
+    font-size: 20px;
 }
 
 .new-item {
     padding: 12px;
-    vertical-align: bottom;
-    display: flex;
+    display: none;
+    flex-direction: column;
     justify-content: space-between;
+    vertical-align: bottom;
 }
 
 .new-item-title {
@@ -109,9 +112,36 @@ textarea:focus, input:focus{
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 24px;
 }
 
 .add-btn {
+    border: 2px solid #146DBD;
+    border-radius: 8px;
+    color: #146DBD;
+    background-color: rgba(0, 0, 0, 1);
+    font-family: "Poppins";
+    font-size: 20px;
+    padding: 8px 16px;
+}
+
+.cancel-btn {
+    border: none;
+    color: #690707;
+    background-color: rgba(0, 0, 0, 1);
+    font-family: "Poppins";
+    font-size: 20px;
+    padding: 8px 16px;
+}
+
+.add-form-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-btn-form {
     border: 2px solid #146DBD;
     border-radius: 8px;
     color: #146DBD;

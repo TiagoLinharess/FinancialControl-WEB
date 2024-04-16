@@ -20,8 +20,11 @@
     <div id="container" class="container">
         <!-- Add item form -->
         <br>
-        <h3 class="new-item-title">Adicionar Item</h3>
+        <section class="add-form-section" id="btn-form-section">
+            <button onclick="addBillItemForm()" class="add-btn-form">Adicionar Conta</button>
+        </section>
         <section class="new-item" id="form-section">
+            <h3 class="new-item-title">Adicionar Item</h3>
             <input type="number" id="year-input" placeholder="Ano">
             <div class="select-div">
                 <label class="select-label" for="month-input">Mês:</label>
@@ -51,10 +54,11 @@
                 </select>
             </div>
             <input type="number" id="value-input" placeholder="Valor">
+            <div class="add-btn-div">
+                <button onclick="addBillItem()" class="add-btn">Adicionar</button>
+                <button onclick="cancelItemForm()" class="cancel-btn">Cancelar</button>
+            </div>
         </section>
-        <div class="add-btn-div">
-            <button onclick="addBillItem()" class="add-btn">Adicionar</button>
-        </div>
         <br>
         <!-- Item list -->
         <div id="content">

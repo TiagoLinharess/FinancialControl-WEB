@@ -32,6 +32,7 @@ const fetchBillItems = async () => {
     })
     .then((data) => {
         insertBillItems(data);
+        cancelItemForm();
     })
     .catch((error) => {
       presentError(error);
@@ -267,9 +268,10 @@ const createEditForm = async (id, itemDiv, buttonDiv) => {
     const section = document.getElementById("form-section");
     const clone = section.cloneNode(true);
     clone.className = "edit-item";
+    clone.style.display = "flex";
 
     clone.childNodes.forEach(child => {
-        if (child.id === "year-input") {
+        if (child.id === "year-input" || child.className === "add-btn-div" || child.className === "new-item-title") {
             child.remove();
         } else if (child.className === "select-div") {
             child.childNodes.forEach(node => {
@@ -358,6 +360,39 @@ const addBillItem = () => {
     const type = typeHTML.value;
 
     postBillItem(year, month, name, type, value);
+}
+
+/*
+  --------------------------------------------------------------------------------------
+  Lógica para adicionar formulário da conta.
+  --------------------------------------------------------------------------------------
+*/
+const addBillItemForm = () => {
+    const formSection = document.getElementById("form-section");
+    const btnFormSection = document.getElementById("btn-form-section");
+
+
+    formSection.style.display = "flex";
+    btnFormSection.style.display = "none";
+}
+
+/*
+  --------------------------------------------------------------------------------------
+  Lógica para cancelar formulário da conta.
+  --------------------------------------------------------------------------------------
+*/
+const cancelItemForm = () => {
+    const formSection = document.getElementById("form-section");
+    const btnFormSection = document.getElementById("btn-form-section");
+
+    document.getElementById("year-input").value = "";
+    document.getElementById("month-input").value = "";
+    document.getElementById("name-input").value = "";
+    document.getElementById("type-input").value = "";
+    document.getElementById("value-input").value = "";
+
+    formSection.style.display = "none";
+    btnFormSection.style.display = "flex";
 }
 
 /*
